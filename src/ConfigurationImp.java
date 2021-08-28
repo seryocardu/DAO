@@ -9,16 +9,19 @@ public class ConfigurationImp implements Configuration {
         return configuration;
     }
 
+    @Override
     public String getUser() {
-        return System.getenv("user");
+        return System.getenv("userMySQL");
     }
 
+    @Override
     public String getPassword() {
-        return System.getenv("pass");
+        return System.getenv("passwordMySQL");
     }
 
+    @Override
     public String getUrl() {
-        return System.getenv("url");
+        return System.getenv("urlMySQL");
 
     }
 }

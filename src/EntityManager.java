@@ -1,4 +1,4 @@
-import java.sql.ResultSet;
+import java.util.Optional;
 
 public interface EntityManager {
 
@@ -8,5 +8,5 @@ public interface EntityManager {
 
     public <T> EntityManager addRangeStatement(final Iterable<T> iterable, String sql, Statement<T> statement);
 
-    public <T> T Select(ResultSet resultSet);
+    public <T> Optional<T> select(Class<T> clazz, Resultset<T> resultset);
 }
